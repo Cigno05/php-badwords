@@ -10,3 +10,5 @@
 ## BONUS:
 stampate in pagina anche l numero totale di sostituzione che sono state fatte della parola inviata dall’utente
 PS. dovete cercare nella documentazione del metodo str_replace
+
+

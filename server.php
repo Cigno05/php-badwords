@@ -8,29 +8,23 @@ $paragraphLenght = strlen($paragraph);
 $censored = $_GET['censored'];
 // var_dump($censored);
 
-$censoredReplace = str_ireplace($censored, '***', $censored);
+$censoredReplace = str_replace($censored, '***', $paragraph, $censoredCount);
 // var_dump($censoredReplace);
 
-$censoredLenght = strlen($censored);
-// var_dump($censoredLenght);
 
-$censoredReplaceSimbol = str_repeat('*', $censoredLenght);
-// var_dump($censoredReplaceSimbol);
+// echo '<pre>';
+// var_dump($paragraph);
 
-echo '<pre>';
-var_dump($paragraph);
+// var_dump($paragraphLenght);
 
-var_dump($paragraphLenght);
+// var_dump($censored);
 
-var_dump($censored);
+// var_dump($censoredReplace);
 
-var_dump($censoredReplace);
+// var_dump($censoredCount);
 
-var_dump($censoredLenght);
 
-var_dump($censoredReplaceSimbol);
-
-echo '</pre>';
+// echo '</pre>';
 
 ?>
 
@@ -45,15 +39,12 @@ echo '</pre>';
 
 <body>
 
-    <p>
-    <h1><?php echo $paragraph ?></h1>
-    <h3>La lunghezza del paragrafo leggibile è di <?php echo $paragraphLenght ?> caratteri</h3>
-    </p>
-    <p>
-    <h1>Sostituzione con 3 aterischi: <?php echo $censoredReplace ?></h1>
-    <h1>Sostituzione con 1 aterisco per carattere: <?php echo $censoredReplaceSimbol ?></h1>
-    <h3>La lunghezza del paragrafo censurato è di <?php echo $censoredLenght ?> caratteri</h3>
-    </p>
+    <div>
+        <h1>Testo non censurato: <?php echo $paragraph ?></h1>
+        <h2>La lunghezza del paragrafo non censurato è di <?php echo $paragraphLenght ?> caratteri</h2>
+        <h1>Testo censurato: <?php echo $censoredReplace ?></h1>
+        <h2>Parole censurate: <?php echo $censoredCount ?></h2>
+    </div>
 
 </body>
 
